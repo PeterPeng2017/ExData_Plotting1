@@ -13,7 +13,6 @@ endDate <- as.Date("2007-02-02", "%Y-%m-%d")
 
 targetPower <- power %>% filter(Date >= startDate & Date <= endDate)
 
-
 targetPower <- targetPower %>% mutate(Time = paste(Date, Time))
 
 targetPower <- targetPower %>% mutate(Time = ymd_hms(Time),
@@ -23,7 +22,6 @@ targetPower <- targetPower %>% mutate(Time = ymd_hms(Time),
                                       Sub_metering_2 = as.numeric(Sub_metering_2),
                                       Sub_metering_3 = as.numeric(Sub_metering_3),
                                       Voltage = as.numeric(Voltage))
-
 
 #Now we're beginning drawing...
 
